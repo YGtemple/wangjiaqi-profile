@@ -5,7 +5,7 @@ import markdown
 
 ROOT = Path(__file__).resolve().parents[1]
 source = (ROOT / "profile.md").read_text(encoding="utf-8")
-source = re.sub(r"^#\s+王佳琦个人资料、项目与活动核验总报告\s*\n", "", source, count=1)
+source = re.sub(r"^#\s+[^\n]+\n", "", source, count=1)
 
 md = markdown.Markdown(
     extensions=["tables", "toc", "fenced_code", "sane_lists"],
@@ -50,8 +50,8 @@ page = r'''<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="王佳琦（竹心 / YGtemple）的个人经历、项目作品、竞赛荣誉与证据核验档案。">
-<title>王佳琦 · 个人经历与荣誉档案</title>
+<meta name="description" content="王佳琦（竹心 / YGtemple）的公开个人主页：项目作品、程序设计竞赛、AI 应用、AIGC 创作与校园实践。">
+<title>王佳琦 · 竹心｜项目、荣誉与个人主页</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='34' font-family='sans-serif' fill='white'%3E%E7%AB%B9%3C/text%3E%3C/svg%3E">
 <style>
 :root{--bg:#f6f7f9;--paper:#fff;--ink:#1f2937;--muted:#5f6b7a;--line:#e2e6eb;--blue:#2563eb;--blue-soft:#eaf1ff;--green:#18794e;--green-soft:#e9f6ef;--amber:#925d06;--amber-soft:#fff5dc;--mono:Consolas,'Courier New',monospace;--sans:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif}
@@ -65,20 +65,19 @@ page = r'''<!doctype html>
 <body>
 <div class="shell">
 <header class="hero" id="top">
-  <div class="eyebrow">PERSONAL ARCHIVE · 2026</div>
+  <div class="eyebrow">PORTFOLIO · 2026</div>
   <h1>王佳琦 <span>/ 竹心</span></h1>
   <p class="hero-lead">郑州升达经贸管理学院外国语学院翻译专业 2024 级本科生。以翻译专业背景连接程序设计、AI 应用、AIGC 内容生产与开源工具，持续把想法做成可展示、可复用的作品。</p>
   <div class="hero-tags"><span class="tag">C/C++ 与算法</span><span class="tag">Qt 与前端</span><span class="tag">AI 智能体</span><span class="tag">AIGC 影像</span><span class="tag">开源 Skill</span></div>
-  <div class="legend" aria-label="证据标记"><span class="proved">已证实</span><span class="self">个人自述</span><span class="todo">待核对</span></div>
-  <div class="hero-actions"><a class="button primary" href="https://github.com/YGtemple" target="_blank" rel="noopener noreferrer">访问 GitHub · YGtemple</a><a class="button" href="profile.md">查看完整 Markdown 档案</a></div>
-  <div class="stats"><div class="stat"><b>52</b><span>GitHub 公开仓库</span></div><div class="stat"><b>13</b><span>重点荣誉与参赛记录</span></div><div class="stat"><b>16</b><span>项目与作品方向</span></div><div class="stat"><b>2024</b><span>翻译本科入学年份</span></div></div>
+  <div class="hero-actions"><a class="button primary" href="https://github.com/YGtemple" target="_blank" rel="noopener noreferrer">GitHub · YGtemple</a><a class="button" href="mailto:1744059451@qq.com">1744059451@qq.com</a><a class="button" href="tel:15314662965">电话 / 微信 · 15314662965</a></div>
+  <div class="stats"><div class="stat"><b>52</b><span>GitHub 公开仓库</span></div><div class="stat"><b>15</b><span>荣誉与实践记录</span></div><div class="stat"><b>16</b><span>项目与作品方向</span></div><div class="stat"><b>2024</b><span>翻译本科入学年份</span></div></div>
 </header>
-<div class="notice">本页按证据强度整理：证书、官网与公开仓库支持的内容标为“已证实”；个人材料中的经历保留为“个人自述”；归属、名单、数字与审批状态的冲突不静默合并。页面不含手机号、学号、证件号和家庭隐私。</div>
+<div class="notice">翻译专业 × 程序设计 × AI 应用 × AIGC 创作。欢迎浏览我的项目与作品，也欢迎通过邮件、电话或微信交流合作。</div>
 <div class="layout">
-<aside class="sidebar" aria-label="档案目录"><div class="sidebar-title">档案目录</div>__NAV__</aside>
+<aside class="sidebar" aria-label="主页目录"><div class="sidebar-title">主页目录</div>__NAV__</aside>
 <main class="content"><article class="report">__ARTICLE__</article></main>
 </div>
-<footer class="footer">王佳琦 · 竹心 · YGtemple<br>资料整理日期：2026-11-13 · 以原始证据与最新核验为准</footer>
+<footer class="footer">王佳琦 · 竹心 · YGtemple<br>保持好奇，持续创作，把想法变成作品。</footer>
 </div>
 <button class="back-top" id="backTop" aria-label="返回顶部" title="返回顶部">↑</button>
 <script>

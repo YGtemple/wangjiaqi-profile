@@ -1,18 +1,14 @@
-# 王佳琦 · 个人经历与荣誉档案
+# 王佳琦（竹心）· 个人主页
 
-这是王佳琦（竹心 / `YGtemple`）的个人资料仓库，用于持续记录学习经历、项目作品、竞赛荣誉、志愿服务与公开技术输出。
+王佳琦 / `YGtemple` 的公开个人主页与经历仓库，记录学习历程、代表项目、竞赛荣誉、AIGC 创作、校园实践和联系方式。
 
-## 内容
+## 仓库内容
 
-- `profile.md`：完整核验档案，区分“已证实、个人自述、待核对”。
-- `index.html`：由完整档案生成的静态个人主页，可由 GitHub Pages 直接托管。
-- `scripts/build_site.py`：修改 `profile.md` 后重新生成主页的脚本。
+- `profile.md`：完整个人介绍与经历。
+- `index.html`：可直接由 GitHub Pages 托管的静态主页。
+- `scripts/build_site.py`：修改 `profile.md` 后重新生成主页。
 
-## 隐私口径
-
-不收录手机号、学号、身份证号、准考证号、账号令牌、家庭困难认定和医疗信息。团队成果不写成个人独立完成；未正式立项、未核实奖项和存在冲突的名单不写成确定事实。
-
-## 本地更新主页
+## 更新主页
 
 ```powershell
 python -m pip install -r requirements.txt
@@ -21,6 +17,6 @@ python scripts/build_site.py
 
 ## GitHub Pages
 
-本仓库按 `main` 分支根目录直接发布静态页面设计。启用路径通常为仓库 `Settings → Pages → Deploy from a branch → main / (root)`。
+仓库使用 `main` 分支根目录发布。进入 `Settings → Pages`，选择 `Deploy from a branch`，分支选择 `main / (root)` 即可。
 
-**Pages 是否公开与仓库是否私有是两个独立设置。当前文件准备不代表已启用 Pages；发布前必须确认网站可见范围。**
+Pages 启用后的公开主页：<https://ygtemple.github.io/wangjiaqi-profile/>
